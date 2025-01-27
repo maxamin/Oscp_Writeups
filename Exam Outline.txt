@@ -1,0 +1,22 @@
+Things for us to cover for OSCP:
+
+Port Scanning
+How to Linux Priv Esc
+How to Windows Priv Esc
+Local File Inclusion
+Manual SQL Injection, both pulling records from database and popping a shell
+Linux Buffer Overflows
+Windows Buffer Overflows
+Python, php, bash, c Scripting
+Tunneling/Firewall Bypassing/Port Redirection
+Antivirus Evasion
+Password Brute Forcing
+E n u m e r a t i o n 
+Active Directory Attacks
+PowerShell scripting
+Vuln Scanning
+How to actually use metasploit properly
+Adjusting, editing, and fixing exploits
+Proper Usage of Burp Suite
+Wireshark
+XSS

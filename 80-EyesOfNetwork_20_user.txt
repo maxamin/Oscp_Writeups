@@ -1,0 +1,15 @@
+.80 EyesOfNetwork
+
+User flag:
+
+		From port 80/443, you could locate a login page for web application EyesOfNework
+		login with admin:123456
+
+		Exploit: https://www.exploit-db.com/exploits/47280
+		EyesOfNetwork 5.1 - Authenticated Remote Command Execution 
+
+		revise exploit and run "python exploit.py"
+
+		reverse shell obtained!
+		
+Reference: https://rioru.github.io/pentest/web/2017/03/28/from-unauthenticated-to-root-supervision.html

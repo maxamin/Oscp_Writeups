@@ -1,0 +1,28 @@
+
+LazyB (.41)
+
+
+Operating System Linux
+Points 20
+Similar Machine (User) HackTheBox’s Canape
+Similar Machine (Root) VulnHub’s Pluck
+
+
+Exploit to Getting User
+
+1. Port 5984 - CouchDB
+2. couchdb httpd 1.6.0 exploit -
+https://github.com/vulhub/vulhub/blob/master/couchdb/CVE-2017-12636/exp.py
+3. Modify exploit
+4. Start netcat listener
+5. User Shell!
+
+
+Privilege Escalation to Root
+
+1. SUID Binary - Exim 4.84-3
+2. Use searchsploit
+3. Modify 39535.sh
+4. Run sed -i -e 's/\r$//' 39535.sh to fix errors
+5. Run exploit
+6. Root shell!

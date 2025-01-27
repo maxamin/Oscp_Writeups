@@ -1,0 +1,17 @@
+winpower 85
+
+You find a SMB share (port 445) you can access anonymously (files)
+The Webserver has a directory (files)
+Upload a ASP Web Shell ion the SMNB Share and brose it on
+http://IP/files/cmd.asp
+
+From there you can execute cmd but the Box has a AV. Soy ou need some special payload for a shell.
+You can use
+https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
+
+Put at the End your IP and start a nc listner.
+Get a Shell.
+
+You can use Juice Potato for PrivEsc but the AV will detect Juice Potato.
+You can use https://github.com/Genetic-Malware/Ebowla
+To Obscure Juice Potato and get a System shell

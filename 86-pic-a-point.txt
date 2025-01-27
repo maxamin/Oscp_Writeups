@@ -1,0 +1,19 @@
+.86 Pic-A-Point
+
+Enumerate all ports and you will see http.
+
+Get in the website. Login user is admin and password you can bypass it by sql injection.
+
+https://github.com/mrpostman02/Pic-A-Point
+
+Here you can see how the website is made and you can dump sql databases.
+Sql injections after admin login:
+https://www.exploit-db.com/exploits/47427
+
+------------------
+
+File Thingie 2.5.8 is intalled in port 7080 (http://file.oscp)
+use https://exploit-db.com/exploits/47349
+
+
+sudo mysql -uroot -pLetMeIn123 -e '\! /bin/sh'

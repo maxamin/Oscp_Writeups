@@ -1,0 +1,63 @@
+
+
+
+192.168.41.113 phplist 
+
+
+***********
+User
+***********
+
+Nmap -sT — montage 10000 192.168.41.113
+
+Results:
+
+22 - SSH
+80 - http
+111 - rpcbind 
+2049 - nfs
+
+Go buster port 80 reveals /lists/
+
+Nikto same result
+
+/lists/admin reveals login page and version
+Phplist 3.5.1
+
+Showmount -e reveals /home/thomas 
+
+mkdir nfs on local machine
+
+Mount -t nfs 192.168.41.113:/home/thomas /nfs
+
+This mounts the entire Thomas home directory
+
+on the mounted share there is a .mozilla file 
+
+use this https://github.com/unode/firefox_decrypt on the .mozilla directory
+
+and get the credentials
+
+and ssh login with it
+
+Ref: HTB chaos machine
+
+https://0xrick.github.io/hack-the-box/chaos/
+
+
+
+
+
+
+*************
+Root
+*************
+Enumerate : linenum / ps -aux 
+theres an openSMTPD service running as root
+
+Use this exploit 
+
+https://www.exploit-db.com/exploits/48051
+
+And get root #
+

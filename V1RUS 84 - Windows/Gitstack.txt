@@ -1,0 +1,18 @@
+Goto webpage on port 80
+
+Login with default credentials. admin:admin
+
+Find the gitstack portal and click on the stack menu.
+
+Choose the command portal option.
+
+replace stack.php?cmd=ralcom 
+with 
+
+stack.php?cmd=ralcom;whoami
+
+You can get a shell now.
+
+Use sempersonate to get the admin.
+
+type proof.txt

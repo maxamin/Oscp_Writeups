@@ -1,0 +1,66 @@
+                              ..    ..                    .                                        
+                        x .d88"   dF            oec :    @88>                            .uef^"    
+                   u.    5888R   '88bu.        @88888    %8P      u.    u.             :d88E       
+     uL      ...ue888b   '888R   '*88888bu     8"*88%     .     x@88k u@88c.       .   `888E       
+ .ue888Nc..  888R Y888r   888R     ^"*8888N    8b.      .@88u  ^"8888""8888"  .udR88N   888E .z8k  
+d88E`"888E`  888R I888>   888R    beWE "888L  u888888> ''888E`   8888  888R  <888'888k  888E~?888L 
+888E  888E   888R I888>   888R    888E  888E   8888R     888E    8888  888R  9888 'Y"   888E  888E 
+888E  888E   888R I888>   888R    888E  888E   8888P     888E    8888  888R  9888       888E  888E 
+888E  888E  u8888cJ888    888R    888E  888F   *888>     888E    8888  888R  9888       888E  888E 
+888& .888E   "*888*P"    .888B . .888N..888    4888      888&   "*88*" 8888" ?8888u../  888E  888E 
+*888" 888&     'Y"       ^*888%   `"888*""     '888      R888"    ""   'Y"    "8888P'  m888N= 888> 
+ `"   "888E                "%        ""         88R       ""                    "P'     `Y"   888  
+.dWi   `88E                                     88>                                          J88"  
+4888~  J8%                                      48                                           @%    
+ ^"===*"`                                       '8                                         :"      
+
+
+
+
+01100111 01101111 01101100 01100100 01100110 01101001 01101110 01100011 01101000 
+
+
+......
+
+
+Clorine 102 
+
+****************
+User:
+*****************
+
+Enum there is a 80 has clorine hostname and SMB and EFS Easy Chat Server
+
+the exploit 
+EFS Easy Chat Server - Authentication Request Handling Buffer Overflow (Metasploit)
+
+https://www.exploit-db.com/exploits/16772
+
+
+Metasploit:
+
+use windows/http/efs_easychatserver_username
+
+target set to auto
+ 
+change payload from meterpreter to normal shell
+for some reasons meterpreter dying.
+
+
+
+alternative way
+
+you can make manual exploit and you will not lose your wildcard(metasploit)
+
+we got badchars from the exploit
+
+'BadChars' => "\x00\x0a\x0b\x0d\x20\x23\x25\x26\x2b\x2f\x3a\x3f\x5c",
+
+
+Ref:
+https://www.fuzzysecurity.com/tutorials/expDev/3.html
+
+https://www.doyler.net/security-not-included/easy-chat-server-exploit
+
+
+© All rights reserved goldfinch.

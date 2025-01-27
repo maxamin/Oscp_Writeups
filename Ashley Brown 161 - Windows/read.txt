@@ -1,0 +1,10 @@
+lots of open ports
+but eventually its a web app vuln
+
+you have to download SAM file and SYSTEM hives
+and hive them together ending up having system NTLM hashes
+bruteforce them and RDP to the sysetm
+
+
+
+https://www.exploit-db.com/exploits/23318

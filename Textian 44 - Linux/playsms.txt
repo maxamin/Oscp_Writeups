@@ -1,0 +1,9 @@
+
+https://192.168.27.44:8787/2315e8131432505230f581cf689e783a/
+admin:admin
+
+Exploit
+https://www.exploit-db.com/exploits/44598
+
+Privilege escalation
+https://www.exploit-db.com/exploits/44298

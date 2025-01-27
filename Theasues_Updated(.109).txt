@@ -1,0 +1,14 @@
+Steps to own OSCP machine THESEUS .109:
+1. Scan with nmap and find pachev_ftp which is vulnerable to exploit 47956 from exploit-db
+2. Using this to find /export/samba/secure/smbpasswd.bak and /etc/samba/smb.conf
+3. Reveal the hashes - james hash could be cracked, mary hash is important too
+4. LogIn to smb with mary hash, find the finance folder and as you can see within the smb.conf -> there is a magic script
+5. create a malicious script file to open a reverse shell connection -> python works well, save it with the same name of the magic script
+6. Now put the script via smb into the finance folder and you got a reverse shell from mary
+7. reveal local.txt
+8. change to user james usind su and the cracked creds
+9. use linpeas and find /usr/bin/xpasswd.sh
+10. take a look at this script: it changes the password of the users and runs as root
+11. create a string that matches the criteria and trigger smbpasswd, insert old james password (the cracked one) then enter the 16 characters long string (with at least one uppercase character) and add "\\x0A\\x0Aroot:NewPass" in order to escape from the -e and to set the root password to NewPass
+12. Now use "su root -" and enter NewPass as password.
+13. Grab the proof.txt and be funny 

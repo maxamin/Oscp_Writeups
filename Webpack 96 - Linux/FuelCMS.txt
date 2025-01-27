@@ -1,0 +1,22 @@
+Use Dirb or Dirbuster or Gobuster to find the /cms
+
+Default credentials are admin:admin
+
+Use this exploit to get low priv shell:
+Exploit Database
+fuelCMS 1.4.1 - Remote Code Execution
+https://www.exploit-db.com/exploits/47138
+
+Comment the proxy variable and remove proxies -- request.get(burp0_url)
+
+To escalate privileges, use systemctl
+
+https://medium.com/@klockw3rk/privilege-escalation-leveraging-misconfigured-systemctl-permissions-bc62b0b28d49
+
+Find a world writable path first. 
+
+find / -type f! -path "/ proc / *" -prune -perm o + w exec ls {} -lg /; 2&gt; / dev / null
+Use this path and create the root.service in that path. 
+
+You will get root.
+

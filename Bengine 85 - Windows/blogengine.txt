@@ -1,0 +1,16 @@
+http://192.168.xx.40:8888/BlogEngine/admin/#/
+Admin
+Admin
+
+local priv
+
+https://www.exploit-db.com/exploits/46353
+192.168.xx.40:8888/BlogEngine/?theme=../../App_Data/files
+check : https://medium.com/@CyberOPS.LittleDog/tryhackme-hackpark-7d4f7fbfd561
+
+
+
+root priv
+download file from
+https://www.greyhathacker.net/?p=1025
+and run may be 20 times

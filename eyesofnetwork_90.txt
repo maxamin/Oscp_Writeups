@@ -1,0 +1,54 @@
+192.168.44.90 (20 points service eyenetwork)
+
+
+Test vulnerability in a shell bash SQLI Blind:
+Time curl -s -o /dev /null https://192.168.44.90:5880/logout.php —insecure -b “session_id’  OR BENCHMARK(100000000, 1)=1 — -“
+And compare the time with
+Time curl -s -o /dev /null https://192.168.44.90:5880/logout.php —insecure -b “session_id’  OR BENCHMARK(500000000, 1)=1 — -“
+
+There is a manual exploit that use the blind sqli to cookie session admin in databse.
+
+exploit:
+https://www.exploit-db.com/exploits/41774 
+
+Note: the exploit need a bit modification.
+
+alternative: 
+
+
+https://www.exploit-db.com/exploits/47280
+
+creds are admin:123456
+
+you got low shell
+
+**************************************************
+
+PE: snmp is runnig as root, snmpd.conf is writeable , echo bash shell code to it.
+
+Then back to eyesofnetwork web page , find prouction tools,  use snmpwalk to search any MIB  to triger execution of bash code in snmpd.conf
+
+#
+
+
+alternative:
+
+use the wilcard Metasploit in this exercise and is very quickly a root reverse shell
+exploit/linux/http/eyesofnetwork_autodiscovery_rce
+
+or you can use manually the exploit.
+
+Exploit SQLI to  RCE
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-9465
+
+
+
+you can use your wildcard for getting root and user flags.
+
+
+
+the full concept:
+
+https://rioru.github.io/pentest/web/2017/03/28/from-unauthenticated-to-root-supervision.html
+
+Credits to goldfinch.

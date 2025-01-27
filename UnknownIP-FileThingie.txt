@@ -1,0 +1,3 @@
+Port 7080
+At file.oscp
+Use www.exploit-db.com/exploits/47349

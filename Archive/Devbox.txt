@@ -1,0 +1,13 @@
+DevBox 
+https://www.exploit-db.com/exploits/47799 
+// user
+
+
+root //
+
+Insecure Service Permission
+
+Ref:
+
+
+https://medium.com/@orhan_yildirim/windows-privilege-escalation-insecure-service-permissions-e4f33dbff219
